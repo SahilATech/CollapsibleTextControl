@@ -44,9 +44,8 @@ export class CollapsibleTextControl implements ComponentFramework.ReactControl<I
         this._required =context.parameters.TextField.attributes?.RequiredLevel == 1 ? true : context.parameters.TextField.attributes?.RequiredLevel == 2 ? true : false;
         this._label = ""; //context.parameters.TextField.attributes?.DisplayName??"";
         this._Description = context.parameters.TextField.attributes?.Description??"";
-
-         /** * Ime Mode   * 0 - Auto,  * 1 - Inactive, * 2 - Active,  * 3 - Disabled     */         
-        this._isDisable = context.parameters.TextField.attributes?.ImeMode == 1 ? true : context.parameters.TextField.attributes?.ImeMode == 3 ? true : false;
+      
+        this._isDisable = context.mode.isControlDisabled;
         
     }
 
