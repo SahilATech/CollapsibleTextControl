@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="sa" constructor="CollapsibleTextControl" version="0.0.1" display-name-key="CollapsibleTextControl" description-key="CollapsibleTextControl description" control-type="virtual" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    
+      <type-group name="Text">
+        <type>Multiple</type>
+        <type>SingleLine.Text</type>
+        <type>SingleLine.TextArea</type>
+      </type-group>
+      <property name="TextField" display-name-key="Text" of-type-group="Text" usage="bound" required="true" />
+
+      <property name="Formfieldheight" display-name-key="Form field height (Rows)" description-key="Max Height is 40 Rows" of-type="Whole.None" usage="input" required="true" />
+
+      <property name="autoAdjustHeight" display-name-key="Use all available vertical space" of-type="TwoOptions" usage="input" required="true" />
+      
+      <property name="DefaultExpanded" display-name-key="Default Expandable" of-type="TwoOptions" usage="input" required="true" />
+
+
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="8.29.0" />
+    </resources>
+  </control>
+</manifest>
